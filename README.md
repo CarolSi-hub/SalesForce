@@ -37,7 +37,12 @@ https://github.com/icemakegirl
 
 ### Desafio Individual
 
-Criar um formulario para cadastrar os revendedores e os dados devem persistir no BM.<br>
+Criar um formulario para cadastrar os revendedores e os dados devem persistir no BM.<br><br>
 
-- formulario XML: profileDealer
-- 
+- formulario XML: profileDealer<br>
+- formulario template: account/signindealer/signInDealer --> que renderiza registerDealerForm.isml<br>
+- controller: SignInDealer<br>
+- Custom Object: SignInDealer<br>
+
+Na pagina home do site na StoreFront, seguir ate footer e clicar em revendedores.
+Preencher o formulario e submeter. 
