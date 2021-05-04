@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+		<field 
+			formid="fantasyname" 
+			label="label.input.fantasyname.profile" 
+			mandatory="true" 
+			max-length="50"
+			missing-error="error.message.required" 
+			range-error="error.message.50orless" 
+			type="string"
+		    binding="fantasyname" />
+
+    	<field 
+			formid="socialname" 
+			label="label.input.socialname.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			range-error="error.message.50orless" 
+			type="string" 
+			binding="socialname"/>
+
+		<field 
+			formid="cnpj" 
+			label="label.input.cnpj.profile" 
+			mandatory="true" 
+			max-length="16" 
+			missing-error="error.message.required"
+			range-error="error.message.50orless" 
+			type="string" 
+			binding="cnpj"/>
+
+		<field
+			formid="email" 
+			label="label.input.email.profile" 
+			mandatory="true" 
+			max-length="50" 
+			missing-error="error.message.required"
+			parse-error="error.message.parse.email.profile.form"
+			range-error="error.message.50orless"
+			regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" 
+			value-error="ValueErrorText"
+			type="string"
+			biding="email"/> 
+			<!-- TODO value-error not comming back from the platform -->	
+			
+			
+		<field 
+			formid="phone"
+			label="label.input.phone.profile"
+			mandatory="true"
+			missing-error="error.message.required"
+			parse-error="error.message.parse.phone.profile.form"
+			type="string"
+			binding="phone"/> 
+
+		<field 
+			formid="password" 
+			label="label.input.password.profile"
+			mandatory="true"
+			min-length="8"
+			max-length="255"
+			range-error="error.message.8_255characters"
+			value-error="error.message.currentpasswordnomatch"
+			type="string" 
+			bining="password"/>
+			<!-- TODO value-error -->
+
+</form>

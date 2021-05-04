@@ -1,0 +1,2 @@
+<p>${Resource.msg('submit.sucess.msg.dealer','login',null)}</p>
+

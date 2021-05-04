@@ -1,0 +1,119 @@
+<form
+    action="${pdict.actionUrl}"
+    class="registration"
+    method="POST"
+    name="${pdict.signInDealerForm.attributes}">
+     <div class="form-group
+        <isif condition="${!!pdict.signInDealerForm.fantasyname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="fantasyname">
+            <isprint value="${Resource.msg('label.input.fantasyname.profile','forms',null)}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="fantasyname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-fname-error"
+            <isprint value="${pdict.signInDealerForm.fantasyname.attributes}" encoding="off" />>
+        <div class="invalid-feedback" id="form-fname-error"></div>
+    </div>
+
+   <div class="form-group
+        <isif condition="${!!pdict.signInDealerForm.socialname.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="socialname">
+            <isprint value="${Resource.msg('label.input.socialname.profile','forms',null)}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="socialname"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-lname-error"
+            <isprint value="${pdict.signInDealerForm.socialname.attributes}" encoding="off" />>
+        <div class="invalid-feedback" id="form-lname-error"></div>
+    </div>
+     <div class="form-group
+        <isif condition="${!!pdict.signInDealerForm.cnpj.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="cnpj">
+            <isprint value="${Resource.msg('label.input.cnpj.profile','forms',null)}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="cnpj"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-lname-error"
+            <isprint value="${pdict.signInDealerForm.cnpj.attributes}" encoding="off" />>
+        <div class="invalid-feedback" id="form-lname-error"></div>
+    </div>
+
+    <div class="form-group
+        <isif condition="${!!pdict.signInDealerForm.phone.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="phone">
+            <isprint value="${Resource.msg('label.input.phone.profile','forms',null)}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.phone.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-phone-error"
+            <isprint value="${pdict.signInDealerForm.phone.attributes}" encoding="off" />
+            placeholder="${Resource.msg('example.phone','forms',null)}">
+        <div class="invalid-feedback" id="form-phone-error"></div>
+    </div>
+
+     <div class="form-group
+        <isif condition="${!!pdict.signInDealerForm.email.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="email">
+             <isprint value="${Resource.msg('label.input.email.profile','forms',null)}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="text"
+            class="form-control"
+            id="email"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-pattern-mismatch="${Resource.msg('error.message.parse.email.profile.form','forms',null)}"
+            data-range-error="${Resource.msg('error.message.50orless','forms',null)}"
+            aria-describedby="form-email-error"
+            <isprint value="${pdict.signInDealerForm.email.attributes}" encoding="off" />>
+        <div class="invalid-feedback" id="form-email-error"></div>
+    </div>
+
+   
+
+    <div class="form-group
+        <isif condition="${!!pdict.signInDealerForm.password.mandatory === true}">required</isif>">
+        <label class="form-control-label" for="password">
+            <isprint value="${Resource.msg('label.input.password.profile','forms',null)}" encoding="htmlcontent" />
+        </label>
+        <input
+            type="password"
+            class="form-control"
+            id="password"
+            data-missing-error="${Resource.msg('error.message.required','forms',null)}"
+            data-range-error="${Resource.msg('error.message.8_255characters','forms',null)}"
+            aria-describedby="form-password-error"
+            autocomplete="off"
+            <isprint value="${pdict.signInDealerForm.password.attributes}" encoding="off" />>
+        <div class="invalid-feedback" id="form-password-error"></div>
+    </div> 
+ 
+
+    <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}"/>
+
+    <button type="submit" class="btn btn-block btn-primary">
+        ${Resource.msg('button.createaccount.registration', 'registration', null)}
+    </button>
+    <div class="privacy-policy">
+        ${Resource.msg('description.privacypolicy.registration', 'registration', null)}
+        <a href="${'#'}">
+            ${Resource.msg('link.privacypolicy.registration', 'registration', null)}
+        </a>
+    </div>
+</form>
