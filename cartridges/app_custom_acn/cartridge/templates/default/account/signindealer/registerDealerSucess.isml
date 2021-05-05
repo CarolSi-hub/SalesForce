@@ -1,2 +1,5 @@
-<p>${Resource.msg('submit.sucess.msg.dealer','login',null)}</p>
+<isdecorate template="common/layout/page">
 
+<h1>${Resource.msg('submit.sucess.msg.dealer','login',null)}</h1>
+
+</isdecorate>
